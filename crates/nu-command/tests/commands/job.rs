@@ -121,7 +121,7 @@ fn killing_job_kills_pids() {
         r#"
             let job1 = job spawn {{ nu -c "sleep 1sec" | nu -c "sleep 1sec" }}
 
-            sleep 25ms
+            sleep 400ms
 
             let pids = job list | where id == $job1 | get pids
 
