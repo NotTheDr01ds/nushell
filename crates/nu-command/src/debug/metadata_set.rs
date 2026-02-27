@@ -24,7 +24,7 @@ impl Command for MetadataSet {
             )
             .switch(
                 "datasource-ls",
-                "Assign the DataSource::Ls metadata to the input.",
+                "(DEPRECATED) Assign the DataSource::Ls metadata to the input.",
                 Some('l'),
             )
             .named(
@@ -190,11 +190,6 @@ impl Command for MetadataSet {
             Example {
                 description: "Set the metadata of a file path.",
                 example: "'crates' | metadata set --datasource-filepath $'(pwd)/crates'",
-                result: None,
-            },
-            Example {
-                description: "Set the path columns metadata.",
-                example: "glob * | wrap path | metadata set --path-columns [path]",
                 result: None,
             },
             Example {
